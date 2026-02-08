@@ -74,7 +74,7 @@ function addTask() {
             const des = document.createElement('input')
             des.className = "des"
             des.placeholder = "Task description..."
-            textDiv.appendChild(des)
+            textDiv.replaceChild(des, b)
             des.focus()
 
             des.addEventListener('keydown', (e) => {
@@ -96,8 +96,8 @@ r.addEventListener('keydown', (e) => {
         addTask() 
     }
 }) 
-const toggle = document.querySelector('#toggle');
+const toggle = document.querySelector('#toggle')
 toggle.addEventListener('click', () => {
     console.log("clicked")
-    document.body.classList.toggle('dark');
+    document.body.classList.toggle('dark')
 });
